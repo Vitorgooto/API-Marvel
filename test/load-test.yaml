@@ -1,0 +1,15 @@
+
+config:
+  target: 'https://gateway.marvel.com/v1/public'  
+  phases:
+    - duration: 60  
+      arrivalRate: 10  
+
+scenarios:
+  - flow:
+      - post:
+          url: '/character' 
+          json:
+            name: 'Test Character'
+            description: 'Test Description'
+            imageURL: 'https://example.com/test.jpg'
